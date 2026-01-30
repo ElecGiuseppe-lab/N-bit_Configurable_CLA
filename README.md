@@ -18,19 +18,19 @@ g<sub>i</sub> = A<sub>i</sub> <em>and</em> B<sub>i</sub>
 
 It follows that the carry bits and sum bits can be determined by exploiting the relationships linking them to the p<sub>i</sub> and p<sub>i</sub> signals, as:
 
-Sum<sub>i</sub> = A<sub>i</sub> <em>xor</em> B<sub>i</sub> <em>xor</em> Carry<sub>i</sub> = p<sub>i</sub> <em>xor</em> Carry<sub>i</sub>  
-Carry<sub>i+1</sub> = (A<sub>i</sub> <em>and</em> B<sub>i</sub>) + (A<sub>i</sub> <em>xor</em> B<sub>i</sub>) <em>and</em> Carry<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> <em>and</em> Carry<sub>i</sub>
+Sum<sub>i</sub> = A<sub>i</sub> <em>xor</em> B<sub>i</sub> <em>xor</em> C<sub>i</sub> = p<sub>i</sub> <em>xor</em> Carry<sub>i</sub>  
+C<sub>i+1</sub> = (A<sub>i</sub> <em>and</em> B<sub>i</sub>) + (A<sub>i</sub> <em>xor</em> B<sub>i</sub>) <em>and</em> C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> <em>and</em> C<sub>i</sub>
 
-Using the Carry<sub>i+1</sub> relationship recursively, we obtain:
+Using the C<sub>i+1</sub> relationship recursively, we obtain:
 
-Carry<sub>1</sub> = g<sub>0</sub> + p<sub>0</sub> · C<sub>0</sub>  
-Carry<sub>2</sub> = g<sub>1</sub> + p<sub>1</sub> · C<sub>1</sub> = g<sub>1</sub> + p<sub>1</sub> · g<sub>0</sub> + p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
-Carry<sub>3</sub> = g<sub>2</sub> + p<sub>2</sub> · C<sub>2</sub> = g<sub>2</sub> + p<sub>2</sub> · g<sub>1</sub> + p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>2</sub> · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
-Carry<sub>4</sub> = g<sub>3</sub> + p<sub>3</sub> · C<sub>3</sub> = g<sub>3</sub> + p<sub>3</sub> · g<sub>2</sub> + p<sub>3</sub> · p<sub>2</sub> · g<sub>1</sub> + p<sub>3</sub> · p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>3</sub> · p<sub>2</sub> · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
+C<sub>1</sub> = g<sub>0</sub> + p<sub>0</sub> · C<sub>0</sub>  
+C<sub>2</sub> = g<sub>1</sub> + p<sub>1</sub> · C<sub>1</sub> = g<sub>1</sub> + p<sub>1</sub> · g<sub>0</sub> + p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
+C<sub>3</sub> = g<sub>2</sub> + p<sub>2</sub> · C<sub>2</sub> = g<sub>2</sub> + p<sub>2</sub> · g<sub>1</sub> + p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>2</sub> · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
+C<sub>4</sub> = g<sub>3</sub> + p<sub>3</sub> · C<sub>3</sub> = g<sub>3</sub> + p<sub>3</sub> · g<sub>2</sub> + p<sub>3</sub> · p<sub>2</sub> · g<sub>1</sub> + p<sub>3</sub> · p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>3</sub> · p<sub>2</sub> · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
 	.  
 	.  
 	.  
-Carry<sub>i+1</sub> = g<sub>i</sub> + p<sub>i</sub> · C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> · g<sub>i-1</sub> + p<sub>i-1</sub> · g<sub>i-2</sub> · p<sub>i</sub> · ... p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>i</sub> · ... p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
+C<sub>i+1</sub> = g<sub>i</sub> + p<sub>i</sub> · C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> · g<sub>i-1</sub> + p<sub>i-1</sub> · g<sub>i-2</sub> · p<sub>i</sub> · ... · p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>i</sub> · ... · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
 
 It is clear that the carry bits depend exclusively on the CLA input carry (C<sub>in</sub> = C<sub>0</sub>), as well as the pi and gi signals.
 Consequently, all carry bits, as well as the sum bits, will be calculated simultaneously, optimizing the sum calculation between two operands.
