@@ -59,6 +59,6 @@ WORK IN PROGRES.........
 
 The adder is constructed using three primary components in a hierarchical structure:  
 
-1. `**CLA.vhd**`: The top-level entity that instantiates and connects `CarryGen` and `FA_CLA` components to form the N-bit adder.
-2. `CarryGen.vhd`: A N-bit block that contains the core CLA logic. It generates <em>pp<sub>i</sub></em> and <em>gp<sub>i</sub></em> signals for fast calculation of carry bits (in parallel).
-3. `FA_CLA.vhd`: A slightly modified 1-bit full-adder (without output carry), which serves as the fundamental building block for for calculating the p<sub>i</sub> and g<sub>i</sub> signals, and the sum.
+1. **`CLA.vhd`**: The top-level entity that instantiates and connects `CarryGen` and `FA_CLA` components to form the N-bit adder.
+2. **`CarryGen.vhd`**: A N-bit block that contains the core CLA logic. It generates <em>pp<sub>i</sub></em> and <em>gp<sub>i</sub></em> signals for fast calculation of carry bits (in parallel).
+3. **`FA_CLA.vhd`**: A slightly modified 1-bit full-adder (without output carry), which serves as the fundamental building block for for calculating the p<sub>i</sub> and g<sub>i</sub> signals, and the sum.
