@@ -16,7 +16,7 @@ From the FA's truth table, these signals are defined as:
 p<sub>i</sub> = A<sub>i</sub> <em>xor</em> B<sub>i</sub>  
 g<sub>i</sub> = A<sub>i</sub> <em>and</em> B<sub>i</sub>
 
-It follows that the carry bits and sum bits can be determined by exploiting the relationships linking them to the p<sub>i</sub> and p<sub>i</sub> signals, as:
+It follows that the carry bits and sum bits can be determined by exploiting the relationships linking them to the p<sub>i</sub> and g<sub>i</sub> signals, as:
 
 Sum<sub>i</sub> = A<sub>i</sub> <em>xor</em> B<sub>i</sub> <em>xor</em> C<sub>i</sub> = p<sub>i</sub> <em>xor</em> C<sub>i</sub>  
 C<sub>i+1</sub> = (A<sub>i</sub> <em>and</em> B<sub>i</sub>) + (A<sub>i</sub> <em>xor</em> B<sub>i</sub>) <em>and</em> C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> <em>and</em> C<sub>i</sub>
@@ -50,6 +50,15 @@ WORK IN PROGRES.........
 ## Key Features
 
 * **N-bit Addition:** Perform addition on two N-bit `std_logic_vector` inputs.
-* **High-Speed Architecture:** Implements the CLA algorithm based on group propagate and group generate signals to minimize the propagation delay associated with carry signals and minimize fan-in issues, offering a significant performance advantage over a standard RCA.
+* **High-Speed Architecture:** Implements the CLA algorithm based on <em>**group propagate**</em> (gp<sub>i</sub>) and <em>**group generate**</em> (gg<sub>i</sub>) signals to minimize the propagation delay associated with carry signals and minimize fan-in issues, offering a significant performance advantage over a standard RCA.
 * **Scalable Design:** The architecture is configurable, as the implementation has been structured to allow the CLA size to be parameterized during instantiation, depending on the application needs.
 * **2's Complement Representation:** Sign extension has been implemented to ensure the correct representation of negative values. For positive operands, an adequate word length must be used to prevent overflow.
+
+
+## Architectural Overview
+
+The adder is constructed using three primary components in a hierarchical structure:  
+
+1. `**CLA.vhd**`: The top-level entity that instantiates and connects `CarryGen` and `FA_CLA` components to form the N-bit adder.
+2. `CarryGen.vhd`: A N-bit block that contains the core CLA logic. It generates <em>pp<sub>i</sub></em> and <em>gp<sub>i</sub></em> signals for fast calculation of carry bits (in parallel).
+3. `FA_CLA.vhd`: A slightly modified 1-bit full-adder (without output carry), which serves as the fundamental building block for for calculating the p<sub>i</sub> and g<sub>i</sub> signals, and the sum.
