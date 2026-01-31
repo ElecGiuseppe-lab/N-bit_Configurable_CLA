@@ -69,4 +69,6 @@ The adder is constructed using three primary components in a hierarchical struct
 The design was verified using the `CLA_tb.vhd` testbench. This testbench is self-checking and uses assert statements to automatically report errors.
 
 
-## Behavioral Simulation (Waveform)
+## Behavioral Simulation
+
+![alt text](https://github.com/ElecGiuseppe-lab/N-bit_Configurable_CLA/blob/master/img/CLA_tb.png)
