@@ -76,8 +76,7 @@ The design was verified using the `CLA_tb.vhd` testbench. This testbench is self
 
 ## Possible Improvements
 
-* **Synthesis and Implementation:** The next logical step for this project is to synthesize the design for a target FPGA device. This process would provide key metrics on hardware resource utilization (LUTs, FFs), power dissipation and timing performance (maximum operating frequency).  
--
+* **Synthesis and Implementation:** The next logical step for this project is to synthesize the design for a target FPGA device. This process would provide key metrics on hardware resource utilization (LUTs, FFs), power dissipation and timing performance (maximum operating frequency).
 > [!IMPORTANT]
 > Requires the use of a clock signal.
 * **Pipelining:** To further increase throughput for applications that process continuous data, the adder could be pipelined. This would involve adding registers between the CLA block stages.
