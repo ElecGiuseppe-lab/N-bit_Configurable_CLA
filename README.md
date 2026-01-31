@@ -44,7 +44,7 @@ The CLA adder is composed of two fundamental blocks:
 1. **FA block:** Dedicated to the generation of the sum and the <em>p<sub>i</sub></em> and <em>g<sub>i</sub></em> signals.
 2. **CLA block:** Dedicated to fast calculation of carry overs using <em>**propagate**</em> (<em>p<sub>i</sub></em>) and <em>**generate**</em> (<em>g<sub>i</sub></em>) signals.
 
-![alt text]()
+![alt text](https://github.com/ElecGiuseppe-lab/N-bit_Configurable_CLA/blob/master/img/block_diagram.png)
 
 
 ## Key Features
