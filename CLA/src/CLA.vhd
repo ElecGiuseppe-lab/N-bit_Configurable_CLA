@@ -24,7 +24,7 @@ architecture Behavioral of CLA is
 														A => A(i),
 														B => B(i),
 														Cin => C(i),
-														P => p_int(i),
+														p => p_int(i),
 														g => g_int(i),
 														S => S(i)
 													);													
@@ -36,7 +36,7 @@ architecture Behavioral of CLA is
 														A => A(i-1),
 														B => B(i-1),
 														Cin => C(WidthCLA),	-- Cout
-														P => open,
+														p => open,
 														g => open,
 														S => S(i)
 													);
