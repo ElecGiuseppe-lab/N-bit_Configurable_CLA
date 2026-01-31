@@ -26,7 +26,7 @@ Using the C<sub>i+1</sub> relationship recursively, we obtain:
 C<sub>1</sub> = g<sub>0</sub> + p<sub>0</sub>C<sub>0</sub>  
 C<sub>2</sub> = g<sub>1</sub> + p<sub>1</sub>C<sub>1</sub> = g<sub>1</sub> + p<sub>1</sub>g<sub>0</sub> + p<sub>1</sub>p<sub>0</sub>C<sub>0</sub>  
 C<sub>3</sub> = g<sub>2</sub> + p<sub>2</sub>C<sub>2</sub> = g<sub>2</sub> + p<sub>2</sub>g<sub>1</sub> + p<sub>2</sub>p<sub>1</sub>g<sub>0</sub> + p<sub>2</sub>p<sub>1</sub>p<sub>0</sub>C<sub>0</sub>  
-C<sub>4</sub> = g<sub>3</sub> + p<sub>3</sub>C<sub>3</sub> = g<sub>3</sub> + p<sub>3</sub>g<sub>2</sub> + p<sub>3</sub>p<sub>2</sub>g<sub>1</sub> + p<sub>3</sub>p<sub>2</sub> · p<sub>1</sub>g<sub>0</sub> + p<sub>3</sub>p<sub>2</sub>p<sub>1</sub>p<sub>0</sub>C<sub>0</sub>  
+C<sub>4</sub> = g<sub>3</sub> + p<sub>3</sub>C<sub>3</sub> = g<sub>3</sub> + p<sub>3</sub>g<sub>2</sub> + p<sub>3</sub>p<sub>2</sub>g<sub>1</sub> + p<sub>3</sub>p<sub>2</sub>p<sub>1</sub>g<sub>0</sub> + p<sub>3</sub>p<sub>2</sub>p<sub>1</sub>p<sub>0</sub>C<sub>0</sub>  
 .  
 .  
 .  
