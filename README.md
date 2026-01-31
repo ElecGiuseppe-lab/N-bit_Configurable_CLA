@@ -30,7 +30,7 @@ C<sub>4</sub> = g<sub>3</sub> + p<sub>3</sub> · C<sub>3</sub> = g<sub>3</sub> +
 .  
 .  
 .  
-C<sub>i+1</sub> = g<sub>i</sub> + p<sub>i</sub> · C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> · g<sub>i-1</sub> + p<sub>i</sub> · p<sub>i-1</sub> · g<sub>i-2</sub> + ... + p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>i</sub> · ... · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
+C<sub>i+1</sub> = g<sub>i</sub> + p<sub>i</sub> · C<sub>i</sub> = g<sub>i</sub> + p<sub>i</sub> · g<sub>i-1</sub> + p<sub>i-1</sub> · g<sub>i-2</sub> + ... + p<sub>i</sub> · ... · p<sub>2</sub> · p<sub>1</sub> · g<sub>0</sub> + p<sub>i</sub> · ... · p<sub>1</sub> · p<sub>0</sub> · C<sub>0</sub>  
 
 It is clear that the carry bits depend exclusively on the CLA input carry (C<sub>in</sub> = C<sub>0</sub>), as well as the p<sub>i</sub> and g<sub>i</sub> signals.
 Consequently, all carry bits, as well as the sum bits, will be calculated simultaneously, optimizing the sum calculation between two operands. However, the improvement in speed leads to an increase in circuit complexity.  
