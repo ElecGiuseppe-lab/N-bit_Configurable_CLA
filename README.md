@@ -52,7 +52,7 @@ The CLA adder is composed of two fundamental blocks:
 * **N-bit Addition:** Perform addition on two N-bit `std_logic_vector` inputs.
 * **High-Speed Architecture:** Implements the CLA algorithm based on <em>p<sub>i</sub></em> and <em>g<sub>i</sub></em> signals to minimize the propagation delay associated with carry signal, offering a significant performance advantage over a standard RCA.
 * **Scalable Design:** The architecture is configurable, as the implementation has been structured to allow the CLA adder size to be parameterized during instantiation, depending on the application needs.
-* **2's Complement Signed Binary Numbers Representation:** Sign extension has been implemented to ensure the correct representation of negative integer values. For positive operands, an adequate word length must be used to prevent overflow (e.g. 255 -> 8-bit to extend 9-bit).
+* **Representation Signed Binary Numbers in 2's Complement Notation:** Sign extension has been implemented to ensure the correct representation of negative integer values. For positive operands, an adequate word length must be used to prevent overflow (e.g. 255 -> 8-bit to extend 9-bit).
 
 
 ## Practical Architectural Overview
