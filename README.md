@@ -1,4 +1,4 @@
-# N-bit Configurable Carry Look-Ahead Adder (CLA)
+# N-bit Configurable Carry Look-Ahead (CLA) Adder
 
 In digital systems, arithmetic operations are the foundation of microprocessors. Since any operation can be reduced to binary addition, designing efficient adders is crucial.
 This repository contains the VHDL code for a scalable N-bit carry look-ahead adder.
