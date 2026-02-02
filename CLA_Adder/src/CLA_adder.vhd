@@ -2,15 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
-entity CLA is
+entity CLA_adder is
 	generic (WidthCLA: integer:= 8);	-- default value = 8
 	port(
 			A,B:in std_logic_vector(WidthCLA-1 downto 0);
 			S: out std_logic_vector(WidthCLA downto 0)
 		);
-end CLA;
+end CLA_adder;
 
-architecture Behavioral of CLA is
+architecture Behavioral of CLA_adder is
 
 	signal p_int, g_int: std_logic_vector(WidthCLA-1 downto 0);
 	signal C: std_logic_vector(WidthCLA downto 0);

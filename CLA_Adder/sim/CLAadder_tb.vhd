@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity CLA_tb is
-end CLA_tb;
+entity CLAadder_tb is
+end CLAadder_tb;
 
-architecture Behavioral of CLA_tb is
+architecture Behavioral of CLAadder_tb is
 
     -- Signals for testbench
     signal A_tb : std_logic_vector(7 downto 0) := (others => '0');
@@ -16,7 +16,7 @@ architecture Behavioral of CLA_tb is
 begin
 
     -- Instantiate the DUT
-    DUT: entity work.CLA port map(
+    DUT: entity work.CLA_adder port map(
         A => A_tb,
         B => B_tb,
         S => Sum_tb
