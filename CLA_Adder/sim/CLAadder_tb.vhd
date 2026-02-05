@@ -59,7 +59,7 @@ begin
 								
 								-- automatic report errors
 								assert (to_integer(signed(Sum_tb)) = expected)
-                                    report "*** Output OK! Expected value: " & integer'image(to_integer(expected)) &
+                                    report "*** Output mismatch! Expected value: " & integer'image(to_integer(expected)) &
                                             " Obtained value: " & integer'image(to_integer(signed(Sum_tb))) & " ***"
                                     severity error;  																																																
 							end loop;
